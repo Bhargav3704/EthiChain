@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "name": "Eco-Friendly T-Shirt",
+    "productCode": "ECO12345",
+    "trustScore": 92,
+    "certifications": ["Fair Trade", "Organic Cotton", "Carbon Neutral"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Factory inspected and compliant." },
+      { "year": 2023, "status": "Passed", "details": "Supplier verified ethical sourcing." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "India", "sustainability": "100% Organic Cotton" },
+      { "stage": "Manufacturing", "location": "Bangladesh", "sustainability": "Fair Trade Certified" },
+      { "stage": "Shipping", "location": "Europe", "sustainability": "Low Carbon Footprint" },
+      { "stage": "Retail", "location": "USA", "sustainability": "Eco-friendly Packaging" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sustainable Jeans",
+    "productCode": "SJEAN678",
+    "trustScore": 88,
+    "certifications": ["Recycled Materials", "Water Efficient Production"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Water usage audit completed successfully." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Spain", "sustainability": "Recycled Denim Fibers" },
+      { "stage": "Manufacturing", "location": "Italy", "sustainability": "Solar Powered Factory" },
+      { "stage": "Finishing", "location": "Portugal", "sustainability": "Eco-friendly Dyes" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Organic Coffee Beans",
+    "productCode": "ORGCOF901",
+    "trustScore": 95,
+    "certifications": ["USDA Organic", "Fair Trade Certified", "Rainforest Alliance"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Farm inspection passed organic standards." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "Colombia", "sustainability": "Organic Farming Practices" },
+      { "stage": "Processing", "location": "Colombia", "sustainability": "Water Conservation Methods" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Biodegradable Packaging" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bamboo Toothbrush",
+    "productCode": "BAMTOO456",
+    "trustScore": 90,
+    "certifications": ["FSC Certified Bamboo", "Biodegradable"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Bamboo sourcing verified sustainable." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Sustainably Harvested Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Minimal Waste Production" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recycled Cardboard" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Recycled Yoga Mat",
+    "productCode": "RECYOGA789",
+    "trustScore": 85,
+    "certifications": ["Recycled Rubber", "Non-toxic Materials"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Material composition verified recycled content." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Taiwan", "sustainability": "Recycled Industrial Rubber" },
+      { "stage": "Manufacturing", "location": "Taiwan", "sustainability": "Energy Efficient Manufacturing" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Solar Powered Charger",
+    "productCode": "SOLCHR101",
+    "trustScore": 78,
+    "certifications": ["Renewable Energy Powered Manufacturing"],
+    "auditHistory": [
+      { "year": 2024, "status": "Pending", "details": "Factory audit scheduled for renewable energy usage." }
+    ],
+    "supplyChain": [
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Claims Solar Powered Factory" },
+      { "stage": "Assembly", "location": "Vietnam", "sustainability": "Ethical Labor Practices Claimed" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Eco-Friendly Cleaning Kit",
+    "productCode": "ECCLEAN22",
+    "trustScore": 91,
+    "certifications": ["Plant-Based Ingredients", "Biodegradable Formulas", "Cruelty-Free"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Ingredients verified plant-based and biodegradable." }
+    ],
+    "supplyChain": [
+      { "stage": "Ingredients", "location": "Various", "sustainability": "Plant-Derived Ingredients" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Sustainable Manufacturing Processes" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recycled and Recyclable Packaging" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Organic Cotton Baby Clothes",
+    "productCode": "ORGBABY33",
+    "trustScore": 94,
+    "certifications": ["GOTS Certified Organic Cotton", "Fair Labor Practices"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Cotton sourcing and labor practices verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Turkey", "sustainability": "GOTS Certified Organic Cotton" },
+      { "stage": "Manufacturing", "location": "India", "sustainability": "Fair Labor Standards" },
+      { "stage": "Dyeing", "location": "India", "sustainability": "Low Impact Dyes" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sustainable Wooden Toys",
+    "productCode": "WOODTOY44",
+    "trustScore": 89,
+    "certifications": ["FSC Certified Wood", "Non-toxic Paints"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Wood sourcing and paint toxicity verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Canada", "sustainability": "FSC Certified Sustainable Wood" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Ethical Manufacturing Conditions" },
+      { "stage": "Finishing", "location": "China", "sustainability": "Water-Based Non-toxic Paints" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Reusable Water Bottle (Stainless Steel)",
+    "productCode": "REUSBOT55",
+    "trustScore": 93,
+    "certifications": ["BPA-Free", "Durable and Recyclable"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Material safety and recyclability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "South Korea", "sustainability": "High-Grade Stainless Steel" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Energy Efficient Production" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Fair Trade Chocolate Bar",
+    "productCode": "FAIRCHO66",
+    "trustScore": 96,
+    "certifications": ["Fair Trade Certified", "Organic Ingredients"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Fair trade cocoa sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Cocoa Farming", "location": "Ghana", "sustainability": "Fair Trade Cocoa Beans" },
+      { "stage": "Processing", "location": "Switzerland", "sustainability": "Organic Processing Methods" },
+      { "stage": "Packaging", "location": "Switzerland", "sustainability": "Recyclable Wrapper" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "LED Energy Saving Bulbs",
+    "productCode": "LEDBULB77",
+    "trustScore": 82,
+    "certifications": ["Energy Star Certified", "Mercury-Free"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Energy efficiency and mercury-free status verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Energy Efficient Production Line" },
+      { "stage": "Components", "location": "Japan", "sustainability": "Long-lasting Components" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Upcycled Cotton Tote Bag",
+    "productCode": "UPCTOTE88",
+    "trustScore": 91,
+    "certifications": ["Upcycled Materials", "Ethically Made"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Upcycled cotton content verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "India", "sustainability": "Upcycled Cotton Fabric" },
+      { "stage": "Manufacturing", "location": "India", "sustainability": "Fair Labor Practices" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Plantable Seed Paper Cards",
+    "productCode": "SEEDCRD99",
+    "trustScore": 97,
+    "certifications": ["Seed Paper", "Biodegradable Inks"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Seed viability and ink biodegradability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Materials", "location": "USA", "sustainability": "Wildflower Seed Paper" },
+      { "stage": "Printing", "location": "USA", "sustainability": "Soy-Based Biodegradable Inks" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Sustainable Cork Yoga Blocks",
+    "productCode": "CORKBLK10",
+    "trustScore": 87,
+    "certifications": ["Sustainable Cork Harvesting", "Biodegradable"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Cork sourcing verified sustainable harvesting." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Portugal", "sustainability": "Sustainably Harvested Cork" },
+      { "stage": "Manufacturing", "location": "Portugal", "sustainability": "Low Energy Manufacturing" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Ethical Wool Scarf",
+    "productCode": "ETHWOOL11",
+    "trustScore": 80,
+    "certifications": ["Responsibly Sourced Wool", "Natural Dyes"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Wool sourcing verified responsible practices." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Australia", "sustainability": "Ethically Sourced Merino Wool" },
+      { "stage": "Spinning", "location": "Italy", "sustainability": "Water Recycling in Production" },
+      { "stage": "Dyeing", "location": "Italy", "sustainability": "Plant-Based Dyes" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Reusable Beeswax Food Wraps",
+    "productCode": "BEEWRAP12",
+    "trustScore": 92,
+    "certifications": ["Organic Cotton", "Natural Beeswax", "Reusable"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Materials verified organic and natural." }
+    ],
+    "supplyChain": [
+      { "stage": "Materials", "location": "USA", "sustainability": "Organic Cotton and Local Beeswax" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Handmade in Small Batches" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Biodegradable Phone Case",
+    "productCode": "BIOCASE13",
+    "trustScore": 75,
+    "certifications": ["Compostable Materials", "Reduced Packaging"],
+    "auditHistory": [
+      { "year": 2023, "status": "Pending", "details": "Compostability testing in progress." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Claims Plant-Based Biodegradable Plastic" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Optimized Packaging for Reduced Waste" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Eco-Friendly Yoga Pants",
+    "productCode": "ECOPANT14",
+    "trustScore": 88,
+    "certifications": ["Recycled Polyester", "Oeko-Tex Certified"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Recycled polyester content and Oeko-Tex certification verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Taiwan", "sustainability": "Recycled PET Bottles" },
+      { "stage": "Manufacturing", "location": "Vietnam", "sustainability": "Efficient Dyeing Process" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Sustainable Bamboo Cutlery Set",
+    "productCode": "BAMCUT15",
+    "trustScore": 91,
+    "certifications": ["FSC Certified Bamboo", "Reusable and Biodegradable"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Bamboo sourcing and biodegradability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Sustainably Grown Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Minimal Processing" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Minimalist Recycled Packaging" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Organic Herbal Tea Set",
+    "productCode": "ORGTEA16",
+    "trustScore": 95,
+    "certifications": ["Certified Organic Herbs", "Biodegradable Tea Bags"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Organic herb certification verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "India", "sustainability": "Organic Farming Practices" },
+      { "stage": "Processing", "location": "India", "sustainability": "Natural Drying Methods" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Compostable Tea Bags" }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Recycled Paper Notebook",
+    "productCode": "RECYNOTE17",
+    "trustScore": 83,
+    "certifications": ["Post-Consumer Recycled Paper", "Soy Ink Printing"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Recycled paper content and soy ink verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "USA", "sustainability": "100% Post-Consumer Recycled Paper" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Eco-friendly Printing Processes" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Sustainable Bamboo Bed Sheets",
+    "productCode": "BAMBED18",
+    "trustScore": 90,
+    "certifications": ["Organic Bamboo", "Oeko-Tex Certified"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Bamboo sourcing and Oeko-Tex certification verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Organically Grown Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Water-Efficient Weaving" },
+      { "stage": "Dyeing", "location": "China", "sustainability": "Low-Impact Dyes" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Fairly Traded Olive Oil",
+    "productCode": "FAIROIL19",
+    "trustScore": 96,
+    "certifications": ["Fair Trade Certified", "Organic Farming"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Fair trade olive sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "Greece", "sustainability": "Organic Olive Groves" },
+      { "stage": "Processing", "location": "Greece", "sustainability": "Cold-Pressed Extraction" },
+      { "stage": "Packaging", "location": "Italy", "sustainability": "Recyclable Glass Bottle" }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Eco-Friendly Dish Soap",
+    "productCode": "ECDISHS20",
+    "trustScore": 89,
+    "certifications": ["Plant-Based", "Biodegradable", "Phosphate-Free"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Ingredients verified plant-based and biodegradable." }
+    ],
+    "supplyChain": [
+      { "stage": "Ingredients", "location": "Various", "sustainability": "Plant-Derived Cleaning Agents" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Sustainable Production Facility" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recycled Plastic Bottle" }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Reusable Produce Bags (Organic Cotton)",
+    "productCode": "REUPRO21",
+    "trustScore": 92,
+    "certifications": ["Organic Cotton", "Reusable and Washable"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Organic cotton and reusability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "India", "sustainability": "Organic Cotton Fabric" },
+      { "stage": "Manufacturing", "location": "India", "sustainability": "Ethical Sewing Practices" }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sustainable Sneakers (Recycled)",
+    "productCode": "RECSNEK22",
+    "trustScore": 86,
+    "certifications": ["Recycled Materials", "Vegan"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Recycled content and vegan materials verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Upper Material", "location": "Italy", "sustainability": "Recycled PET and Plastic" },
+      { "stage": "Manufacturing", "location": "Vietnam", "sustainability": "Ethical Labor Standards" },
+      { "stage": "Outsole", "location": "Spain", "sustainability": "Recycled Rubber" }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Bamboo Fiber Socks",
+    "productCode": "BAMSOK23",
+    "trustScore": 88,
+    "certifications": ["Organic Bamboo Fiber", "Oeko-Tex Certified"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Bamboo fiber sourcing and Oeko-Tex certification verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Organically Grown Bamboo Fiber" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Water-Efficient Production" },
+      { "stage": "Dyeing", "location": "China", "sustainability": "Low-Impact Dyes" }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Fair Trade Cane Sugar",
+    "productCode": "FAIRSGR24",
+    "trustScore": 94,
+    "certifications": ["Fair Trade Certified", "Organic Farming Practices"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Fair trade cane sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "Brazil", "sustainability": "Fair Trade Sugarcane" },
+      { "stage": "Processing", "location": "Brazil", "sustainability": "Organic Sugar Refining" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Biodegradable Bag" }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Eco-Friendly Laundry Detergent Sheets",
+    "productCode": "ECOLND25",
+    "trustScore": 91,
+    "certifications": ["Plant-Based Ingredients", "Biodegradable", "Reduced Packaging"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Ingredients verified plant-based and biodegradable." }
+    ],
+    "supplyChain": [
+      { "stage": "Ingredients", "location": "Various", "sustainability": "Plant-Derived Cleaning Agents" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Concentrated Formula for Less Waste" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Minimal Cardboard Packaging" }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Reusable Silicone Food Storage Bags",
+    "productCode": "REUSIL26",
+    "trustScore": 87,
+    "certifications": ["Food-Grade Silicone", "Reusable and Durable"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Silicone material safety and reusability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Food-Grade Silicone Sourcing" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Durable and Long-Lasting Design" }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Organic Cotton Swabs",
+    "productCode": "ORGCSWAB27",
+    "trustScore": 93,
+    "certifications": ["Certified Organic Cotton", "Biodegradable Paper Sticks"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Organic cotton and biodegradable stick verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "India", "sustainability": "GOTS Certified Organic Cotton" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Biodegradable Paper Sticks" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recycled Cardboard Box" }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Sustainable Phone Grip (Bamboo)",
+    "productCode": "BAMGRIP28",
+    "trustScore": 85,
+    "certifications": ["FSC Certified Bamboo", "Minimal Packaging"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Bamboo sourcing and packaging reduction verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Sustainably Harvested Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Efficient Manufacturing Process" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recycled and Minimal Packaging" }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Fair Trade Shea Butter",
+    "productCode": "FAIRSH29",
+    "trustScore": 97,
+    "certifications": ["Fair Trade Certified", "Organic and Unrefined"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Fair trade shea butter sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Sourcing", "location": "Ghana", "sustainability": "Fair Trade Shea Butter" },
+      { "stage": "Processing", "location": "Ghana", "sustainability": "Traditional Unrefined Methods" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recyclable Jar" }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Eco-Friendly Sunscreen (Reef Safe)",
+    "productCode": "ECSUN30",
+    "trustScore": 82,
+    "certifications": ["Reef Safe Formula", "Biodegradable Ingredients"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Reef safe and biodegradable claims verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Ingredients", "location": "Various", "sustainability": "Reef-Safe and Biodegradable Ingredients" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Environmentally Conscious Production" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recyclable Tube" }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Reusable Makeup Remover Pads (Bamboo)",
+    "productCode": "REUMAKE31",
+    "trustScore": 90,
+    "certifications": ["Organic Bamboo Fiber", "Reusable and Washable"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Organic bamboo fiber and reusability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Organically Grown Bamboo Fiber" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Ethical Sewing Practices" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Minimalist Packaging" }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Sustainable Yoga Clothing Set",
+    "productCode": "SUSTYoga32",
+    "trustScore": 84,
+    "certifications": ["Recycled Nylon", "Ethical Production"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Recycled nylon content and ethical production verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Fabric", "location": "Italy", "sustainability": "Recycled Nylon from Fishing Nets" },
+      { "stage": "Manufacturing", "location": "Portugal", "sustainability": "Fair Labor Conditions" },
+      { "stage": "Dyeing", "location": "Portugal", "sustainability": "Water-Efficient Dyeing" }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Organic Lavender Essential Oil",
+    "productCode": "ORGLAV33",
+    "trustScore": 96,
+    "certifications": ["Certified Organic Lavender", "Sustainably Distilled"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Organic lavender sourcing and sustainable distillation verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "France", "sustainability": "Organic Lavender Fields" },
+      { "stage": "Distillation", "location": "France", "sustainability": "Steam Distillation with Renewable Energy" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recyclable Amber Glass Bottle" }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Recycled Plastic Planters",
+    "productCode": "RECYPLAN34",
+    "trustScore": 79,
+    "certifications": ["Post-Consumer Recycled Plastic", "Durable and Weatherproof"],
+    "auditHistory": [
+      { "year": 2023, "status": "Pending", "details": "Recycled plastic content verification in progress." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "USA", "sustainability": "Claims 100% Post-Consumer Recycled Plastic" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Efficient Molding Process" }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Sustainable Bamboo Kitchen Utensils",
+    "productCode": "BAMKIT35",
+    "trustScore": 91,
+    "certifications": ["FSC Certified Bamboo", "Food-Safe Finish"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Bamboo sourcing and food-safe finish verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Sustainably Harvested Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Hand-Crafted and Durable" },
+      { "stage": "Finishing", "location": "China", "sustainability": "Food-Grade Natural Oil Finish" }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Fair Trade Quinoa",
+    "productCode": "FAIRQUI36",
+    "trustScore": 95,
+    "certifications": ["Fair Trade Certified", "Organic Farming Practices"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Fair trade quinoa sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "Peru", "sustainability": "Fair Trade Quinoa Farmers" },
+      { "stage": "Processing", "location": "Peru", "sustainability": "Traditional Processing Methods" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recyclable Packaging" }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Eco-Friendly Backpack (Recycled)",
+    "productCode": "ECOBP37",
+    "trustScore": 86,
+    "certifications": ["Recycled PET Fabric", "PFC-Free Water Repellent"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Recycled PET fabric and PFC-free treatment verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Fabric", "location": "Taiwan", "sustainability": "Recycled PET Bottles Fabric" },
+      { "stage": "Manufacturing", "location": "Vietnam", "sustainability": "Ethical Assembly Line" },
+      { "stage": "Treatments", "location": "Vietnam", "sustainability": "PFC-Free Water Repellent" }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Reusable Coffee Filter (Stainless Steel)",
+    "productCode": "REUCOF38",
+    "trustScore": 92,
+    "certifications": ["Food-Grade Stainless Steel", "Reusable and Dishwasher Safe"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Material safety and reusability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "South Korea", "sustainability": "High-Quality Stainless Steel" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Durable and Long-Lasting" }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Organic Lip Balm (Vegan)",
+    "productCode": "ORGLIP39",
+    "trustScore": 94,
+    "certifications": ["Certified Organic Ingredients", "Vegan and Cruelty-Free"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Organic ingredients and vegan status verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Ingredients", "location": "Various", "sustainability": "Organic and Plant-Based Ingredients" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Small Batch Production" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Recyclable Tube" }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Sustainable Cork Coasters",
+    "productCode": "CORKCOA40",
+    "trustScore": 88,
+    "certifications": ["Sustainable Cork Harvesting", "Biodegradable"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Cork sourcing and biodegradability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Portugal", "sustainability": "Sustainably Harvested Cork" },
+      { "stage": "Manufacturing", "location": "Portugal", "sustainability": "Minimal Processing" },
+      { "stage": "Finishing", "location": "Portugal", "sustainability": "Natural Cork Finish" }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Ethical Cashmere Sweater",
+    "productCode": "ETHCASH41",
+    "trustScore": 70,
+    "certifications": ["Responsibly Sourced Cashmere"],
+    "auditHistory": [
+      { "year": 2023, "status": "Failed", "details": "Audit revealed issues with cashmere sourcing practices." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "Mongolia", "sustainability": "Claims Responsibly Sourced Cashmere" },
+      { "stage": "Spinning", "location": "Italy", "sustainability": "Water Recycling Claimed" },
+      { "stage": "Manufacturing", "location": "Italy", "sustainability": "Ethical Labor Practices Claimed" }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Reusable Food Wraps (Silicone)",
+    "productCode": "REUSILFW42",
+    "trustScore": 89,
+    "certifications": ["Food-Grade Silicone", "Reusable and Heat Resistant"],
+    "auditHistory": [
+      { "year": 2022, "status": "Passed", "details": "Silicone material safety and reusability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Materials", "location": "China", "sustainability": "Food-Grade Silicone" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Durable and Long-Lasting" }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Biodegradable Glitter",
+    "productCode": "BIOGLIT43",
+    "trustScore": 78,
+    "certifications": ["Plant-Based Biodegradable", "Non-toxic"],
+    "auditHistory": [
+      { "year": 2023, "status": "Pending", "details": "Biodegradability testing in progress." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "USA", "sustainability": "Claims Plant-Based Biodegradable Material" },
+      { "stage": "Manufacturing", "location": "USA", "sustainability": "Non-toxic Production Process" }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Eco-Friendly Reusable Straws (Bamboo)",
+    "productCode": "ECOBAMSTR44",
+    "trustScore": 91,
+    "certifications": ["FSC Certified Bamboo", "Reusable and Biodegradable"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Bamboo sourcing and biodegradability verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Raw Materials", "location": "China", "sustainability": "Sustainably Grown Bamboo" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Minimal Processing" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Minimal Recycled Packaging" }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Sustainable Laptop Sleeve (Recycled)",
+    "productCode": "RECLAP45",
+    "trustScore": 84,
+    "certifications": ["Recycled PET Fabric", "Padded Protection"],
+    "auditHistory": [
+      { "year": 2023, "status": "Passed", "details": "Recycled PET fabric content verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Fabric", "location": "Taiwan", "sustainability": "Recycled PET Bottles Fabric" },
+      { "stage": "Manufacturing", "location": "China", "sustainability": "Efficient Manufacturing" },
+      { "stage": "Padding", "location": "China", "sustainability": "Recycled Foam Padding" }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Fair Trade Arabica Coffee Beans",
+    "productCode": "FAIRARB46",
+    "trustScore": 96,
+    "certifications": ["Fair Trade Certified", "Organic"],
+    "auditHistory": [
+      { "year": 2024, "status": "Passed", "details": "Fair trade arabica coffee bean sourcing verified." }
+    ],
+    "supplyChain": [
+      { "stage": "Farming", "location": "Ethiopia", "sustainability": "Fair Trade Arabica Beans" },
+      { "stage": "Processing", "location": "Ethiopia", "sustainability": "Organic Processing Methods" },
+      { "stage": "Packaging", "location": "USA", "sustainability": "Compostable Coffee Bag" }
+    ]
+  }
+]
