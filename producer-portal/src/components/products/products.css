@@ -1,0 +1,119 @@
+/* Center the main section */
+.products-section {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Heading for Products */
+.products-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Main container with rounded corners */
+.products-container {
+    width: 90%; /* Responsive width */
+    max-width: 1200px; /* Prevents it from being too wide */
+    background: white; /* Ensures a visible background */
+    border-radius: 15px; /* Slightly rounded corners */
+    padding: 20px; /* Adds space inside */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    position: relative; /* Remove absolute positioning */
+}
+
+
+/* Scrollable wrapper */
+.products-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 0;
+}
+
+/* Hide scrollbar */
+.products-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Product Card Styling */
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Product Content */
+.product-content {
+    padding: 15px;
+}
+
+/* Headings and Text */
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Read More Button */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Scroll buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
