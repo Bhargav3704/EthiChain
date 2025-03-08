@@ -1,0 +1,249 @@
+/* ProductVerification.css */
+
+.verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212; /* Dark background */
+  color: #fff;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.verification-card {
+  background: #1e1e1e; /* Darker card background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transition: background-color 0.3s ease; /* For dark mode transition */
+}
+
+.verification-card.scanning-dark-mode {
+  background: #111; /* Even darker during scanning */
+}
+
+
+.scan-header, .verified-header {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.verified-header svg {
+  fill: #4CAF50; /* Green checkmark */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.product-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch items to container width */
+  margin-bottom: 20px;
+}
+
+.product-select-label {
+  color: #eee;
+  margin-bottom: 10px;
+  text-align: left; /* Align label to the left */
+  font-weight: bold;
+}
+
+
+.product-dropdown {
+  padding: 12px 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  color: #eee;
+  font-size: 1rem;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 8px;
+  margin-bottom: 15px;
+}
+
+.product-dropdown:focus {
+  outline: none;
+  border-color: #6a994e; /* Highlight color on focus */
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3); /* Softer shadow */
+}
+
+
+.verify-button, .scan-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6a994e; /* Vibrant green */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  display: inline-block; /* Ensure button is inline-block */
+}
+
+
+.verify-button:hover, .scan-button:hover {
+  background-color: #4CAF50; /* Slightly darker green on hover */
+  transform: scale(1.05);
+}
+
+.verify-button:active, .scan-button:active {
+  transform: scale(0.95);
+}
+
+.verify-button:focus, .scan-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* More pronounced focus shadow */
+}
+
+.verify-button:disabled, .scan-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none;
+}
+
+
+.qr-code-scanner-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.qr-code-container {
+  position: relative;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  display: inline-block; /* Adjust to inline-block or flex as needed */
+  margin: 0 auto; /* Center the QR code container */
+}
+
+
+.scan-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  border-radius: 10px;
+  pointer-events: none; /* Make it non-interactive */
+}
+
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00ff00; /* Neon green scan line */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px; /* Rounded edges for the scan line */
+  box-shadow: 0 0 15px #00ff00; /* Neon glow effect */
+}
+
+
+@keyframes scanLineMove {
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(100%);
+  }
+}
+
+
+.neon-scan-line {
+  animation: scanLineMove 1.5s linear infinite;
+}
+
+
+.scan-instruction, .verified-code {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+
+.verified-code strong {
+  color: #fff; /* Highlight product code */
+  font-weight: bold;
+}
+
+
+.trust-score-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #444, #333); /* Subtle gradient */
+}
+
+
+.greenwashing-warning {
+  background-color: #ffc107; /* Amber warning color */
+  color: #333; /* Dark text for contrast */
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+.greenwashing-warning .warning-icon {
+  fill: #d4ac0d; /* Darker amber icon */
+}
+
+
+.loading-icon {
+  fill: #6a994e; /* Green loading icon */
+}
+
+
+.qr-scanner-hidden {
+  position: absolute;
+  left: -1000vw; /* Position off-screen */
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/* Supply Chain Visual Styles */
+.supply-chain-visual {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.supply-chain-visual h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  text-align: center;
+}

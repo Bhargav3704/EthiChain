@@ -1,0 +1,408 @@
+/* Transparency.css */
+
+/* Root Styles for Customization (Optional, for easier theme adjustments) */
+:root {
+    --primary-color: #3490dc; /* Example primary blue */
+    --primary-color-light: #6cb2eb;
+    --primary-color-dark: #2779bd;
+    --accent-color: #a3e048; /* Neon green accent */
+    --success-color: #86efac; /* Green for success/verified */
+    --warning-color: #f87979; /* Red for warning/error */
+    --background-gradient-start: #1c364f;
+    --background-gradient-end: #0f202e;
+    --card-background-color: rgba(255, 255, 255, 0.08); /* Frosted card background */
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #d1d5db; /* Light gray for instructions/secondary text */
+    --border-color: #4a5568;
+    --dropdown-background-color: #374151;
+    --dropdown-focus-shadow: rgba(96, 165, 250, 0.5);
+    --button-background-color: #60a5fa;
+    --button-hover-background-color: #89c4fa;
+    --button-active-shadow: rgba(0, 0, 0, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --qr-code-background: #ffffff;
+    --scan-line-color: rgba(0, 255, 0, 0.8);
+    --scan-overlay-background: rgba(0, 0, 0, 0.7);
+    --verified-header-color: var(--success-color);
+    --warning-header-color: var(--warning-color);
+    --loading-icon-color: var(--primary-color-light);
+  }
+  
+  
+  /* General Container Styles */
+  .verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-color-primary);
+    padding: 2rem; /* Slightly increased padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  }
+  
+  .verification-card {
+    background-color: var(--card-background-color);
+    backdrop-filter: blur(20px); /* Increased blur for frosted effect */
+    padding: 3rem; /* More spacious padding */
+    border-radius: 1.25rem; /* More rounded corners */
+    box-shadow: 0 1.5rem 2.5rem var(--shadow-color); /* Enhanced shadow */
+    width: 100%;
+    max-width: 50rem; /* Further widened card */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle white border */
+  }
+  
+  /* Loading Indicator Styles */
+  .loading-icon {
+    animation: rotate 1.2s linear infinite; /* Slightly slower rotation */
+    color: var(--loading-icon-color);
+    width: 60px; /* Slightly larger icon */
+    height: 60px;
+    margin-bottom: 1.5rem;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Scan State - "Scan to Verify" */
+  .scan-header {
+    font-size: 2.75rem; /* Even larger title */
+    font-weight: 700; /* Bolder font weight */
+    color: var(--primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Increased gap */
+    margin-bottom: 2rem; /* More spacing below header */
+    text-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.5); /* Subtle text glow */
+  }
+  
+  .qr-code-container {
+    margin-top: 2rem;
+    padding: 1.5rem; /* More padding inside QR code container */
+    background-color: var(--qr-code-background);
+    border-radius: 1rem; /* More rounded QR code container */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25); /* Enhanced QR code shadow */
+    display: inline-block;
+  }
+  
+  .scan-instruction {
+    color: var(--text-color-secondary);
+    margin-top: 1.25rem;
+    font-size: 1.1rem; /* Slightly larger instruction text */
+    opacity: 0.9; /* Slightly less opaque for subtlety */
+  }
+  
+  .simulate-scan-button, .verify-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem; /* Larger buttons */
+    background-color: var(--button-background-color);
+    color: var(--text-color-primary);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.6rem 1.2rem var(--shadow-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Added background-color transition */
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px; /* Slight letter spacing for modern look */
+    outline: none; /* Remove default outline */
+  }
+  
+  .simulate-scan-button:hover, .verify-button:hover {
+    transform: scale(1.03); /* Less scale up on hover */
+    box-shadow: 0 0.8rem 1.5rem var(--shadow-color);
+    background-color: var(--button-hover-background-color); /* Lighter blue on hover */
+  }
+  
+  .simulate-scan-button:active, .verify-button:active {
+    transform: scale(0.98); /* Less scale down on click */
+    box-shadow: 0 0.3rem 0.6rem var(--button-active-shadow);
+  }
+  
+  
+  /* Verified State - "Product Verified" */
+  .verified-header {
+    font-size: 2.75rem; /* Even larger title */
+    font-weight: 700;
+    color: var(--verified-header-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem; /* Adjusted margin */
+    text-shadow: 0 0 8px rgba(0, 200, 0, 0.5); /* Green glow for verified */
+  }
+  
+  .verified-code {
+    font-size: 1.3rem; /* Slightly larger code text */
+    margin-top: 0.75rem;
+    color: var(--text-color-secondary);
+    opacity: 0.9;
+  }
+  
+  .trust-score-bar {
+    margin-top: 2rem;
+    font-size: 1.3rem; /* Slightly larger trust score text */
+    font-weight: 700;
+    color: var(--text-color-primary);
+    background-color: var(--success-color);
+    padding: 1rem 1.5rem; /* More padding for trust score bar */
+    border-radius: 0.75rem;
+    box-shadow: 0 0.6rem 1.2rem var(--shadow-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Text shadow for trust score */
+  }
+  
+  /* Greenwashing Warning Styles */
+  .greenwashing-warning {
+    margin-top: 2rem;
+    background-color: var(--warning-color);
+    color: var(--text-color-primary);
+    padding: 1.5rem; /* More padding for warning box */
+    border-radius: 0.75rem;
+    box-shadow: 0 0.75rem 1.5rem var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    gap: 1rem;
+    text-align: left; /* Reset text alignment for warning content */
+  }
+  
+  .warning-icon {
+    color: #f8bb86; /* Light red-orange for the warning icon */
+    width: 30px; /* Slightly larger warning icon */
+    height: 30px;
+  }
+  
+  
+  /* Product Selection Dropdown Styles */
+  .product-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .product-select-label {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    text-align: left;
+    margin-bottom: 0.5rem; /* Add a bit of margin below the label */
+    opacity: 0.9;
+  }
+  
+  
+  .product-dropdown {
+    padding: 1rem 1.25rem; /* More padding for dropdown */
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color-primary);
+    background-color: var(--dropdown-background-color);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" style="color: var(--text-color-primary);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    padding-right: 2.5rem;
+    font-size: 1rem; /* Consistent font size */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Subtle inner shadow */
+  }
+  
+  .product-dropdown:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--dropdown-focus-shadow); /* Stronger focus shadow */
+  }
+  
+  
+  .verify-button {
+    margin-top: 1rem; /* Adjusted margin above button */
+    align-self: stretch; /* Button stretches to full width */
+  }
+  
+  
+  /* Scanning Mode Styles */
+  .verification-container.scanning-mode {
+    background-color: #0d1a26; /* Deeper dark background */
+  }
+  
+  .verification-container.scanning-mode .verification-card {
+    background-color: rgba(30, 41, 59, 0.7); /* Darker, more opaque card in scanning */
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.6); /* Stronger shadow in scanning mode */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly stronger border in dark mode */
+  }
+  
+  .verification-container.scanning-mode .scan-header,
+  .verification-container.scanning-mode .scan-instruction,
+  .verification-container.scanning-mode .product-select-label {
+    color: var(--text-color-primary); /* Ensure text remains white in dark mode */
+    opacity: 1; /* Full opacity in dark mode */
+  }
+  
+  .verification-container.scanning-mode .product-dropdown {
+    background-color: #2a3b55; /* Even darker dropdown in dark mode */
+    border-color: #4b5563;
+    color: var(--text-color-primary);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); /* Deeper inner shadow in dark mode */
+  }
+  
+  .verification-container.scanning-mode .product-dropdown:focus {
+    box-shadow: 0 0 0 3px var(--dropdown-focus-shadow); /* Focus shadow remains visible */
+  }
+  
+  
+  .verification-container.scanning-mode .verify-button,
+  .verification-container.scanning-mode .simulate-scan-button {
+    background-color: #4b5563; /* Darker buttons in dark mode */
+    color: var(--text-color-primary);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.5); /* Stronger button shadow in dark mode */
+  }
+  
+  .verification-container.scanning-mode .verify-button:hover,
+  .verification-container.scanning-mode .simulate-scan-button:hover {
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.6); /* Hover shadow in dark mode */
+  }
+  
+  
+  /* Scan Overlay and Line Styles */
+  .scan-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--scan-overlay-background);
+    z-index: 10;
+    border-radius: inherit;
+    backdrop-filter: blur(5px); /* Apply blur to overlay as well */
+  }
+  
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Thicker scan line */
+    background: var(--scan-line-color);
+    box-shadow: 0 0 20px var(--scan-line-color); /* Stronger glow */
+    z-index: 11;
+    border-radius: 3px;
+    transform: translateY(-50%); /* Start from middle for more central scan effect */
+    animation: scanLineMove 2s linear infinite; /* Slightly slower, smoother scan */
+  }
+  
+  
+  @keyframes scanLineMove {
+    0% {
+      transform: translateY(-100%); /* Start from top */
+    }
+    50% {
+      transform: translateY(100%); /* Move to bottom */
+    }
+    100% {
+      transform: translateY(-100%); /* Return to top for loop */
+    }
+  }
+  
+  
+  /* Hidden QR Scanner Style */
+  .qr-scanner-hidden {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .qr-code-scanner-wrapper {
+    position: relative;
+  }
+  
+  /* Neon Scan Line Style */
+  .scan-line.neon-scan-line {
+    background: linear-gradient(to bottom, rgba(0, 255, 255, 0), #00ffff, rgba(0, 255, 255, 0));
+    box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff; /* Increased neon glow */
+  }
+  
+  
+  /* Scanning Dark Mode - Card Styles */
+  .verification-card.scanning-dark-mode {
+    background-color: #1a1a1a; /* Deeper dark background */
+    color: var(--text-color-primary);
+    border: 1px solid #333;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); /* Even stronger shadow in dark mode */
+  }
+  
+  .verification-card.scanning-dark-mode .scan-header,
+  .verification-card.scanning-dark-mode .scan-instruction,
+  .verification-card.scanning-dark-mode .product-select-label {
+    color: var(--text-color-primary); /* Ensure text remains white in dark mode */
+  }
+  
+  .verification-card.scanning-dark-mode .product-dropdown,
+  .verification-card.scanning-dark-mode .verify-button,
+  .verification-card.scanning-dark-mode .scan-button {
+    background-color: #333;
+    color: var(--text-color-primary);
+    border-color: #555;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); /* Inner shadow for dark mode buttons */
+  }
+  
+  .verification-card.scanning-dark-mode .verify-button:hover,
+  .verification-card.scanning-dark-mode .scan-button:hover {
+    background-color: #444; /* Slightly lighter button hover in dark mode */
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .verification-card {
+      padding: 2rem; /* Reduce padding on smaller screens */
+      max-width: 95%; /* Allow card to take up more width on smaller screens */
+    }
+  
+    .scan-header, .verified-header {
+      font-size: 2rem; /* Smaller header on smaller screens */
+      margin-bottom: 1.5rem;
+    }
+  
+    .qr-code-container {
+      padding: 1rem; /* Smaller padding for QR code */
+      margin-top: 1.5rem;
+    }
+  
+    .scan-instruction, .verified-code, .trust-score-bar, .greenwashing-warning, .product-select-label, .product-dropdown, .verify-button, .simulate-scan-button {
+      font-size: 1rem; /* Adjust font sizes for readability */
+    }
+  
+    .trust-score-bar, .greenwashing-warning {
+      padding: 1rem; /* Adjust padding for bars and warnings */
+      margin-top: 1.5rem;
+    }
+  
+    .product-select-container {
+      margin-bottom: 1rem; /* Reduce margin for product select */
+    }
+  
+    .verify-button, .simulate-scan-button {
+      padding: 0.8rem 1.5rem; /* Adjust button padding */
+      margin-top: 1.5rem;
+    }
+  
+    .loading-icon {
+      width: 50px; /* Smaller loading icon */
+      height: 50px;
+    }
+  }
