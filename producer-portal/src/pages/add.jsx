@@ -111,14 +111,57 @@ const ProducerCertificationForm = () => {
     setSelectedCertificates(Array.from(e.target.selectedOptions, option => option.value));
   };
   
+  
   const handleFileChange = (e) => {
     setUploadedFiles(Array.from(e.target.files));
   };
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Product submitted successfully!");
+  const certificateEndpoints = {
+    "fssc": "/certifications/fssc22000",
+    "rainforest": "/certifications/rainforest",
+    "sa8000": "/certifications/sa8000",
+    "ecocert": "/certifications/ecocert",
+    "iscc": "/certifications/iscc",
   };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (selectedCertificates.length === 0) {
+      alert("Please select at least one certificate.");
+      return;
+    }
+  
+    for (let cert of selectedCertificates) {
+      if (!certificateEndpoints[cert]) {
+        alert(`Invalid certificate selected: ${cert}`);
+        continue;
+      }
+  
+      const apiEndpoint = `http://localhost:8000${certificateEndpoints[cert]}`;
+      const requestData = {
+        organization_name: supplierDetails, // Using supplierDetails as the company name
+      };
+  
+      try {
+        const response = await fetch(apiEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestData),
+        });
+  
+        const result = await response.json();
+        console.log(`Response for ${cert}:`, result);
+        alert(`Response for ${cert}: ${JSON.stringify(result)}`);
+      } catch (error) {
+        console.error(`Error submitting request for ${cert}:`, error);
+        alert(`Error connecting to the server for ${cert}.`);
+      }
+    }
+  };
+  
   
   return (
     <div style={{

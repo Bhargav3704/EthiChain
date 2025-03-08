@@ -1,39 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Trophy, ChevronDown } from "lucide-react";
+import { useProducts } from "../context/ProductsContext";
 
 const HorizontalProductsDisplay = () => {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Eco-Friendly Water Bottle",
-      description: "Made from 100% recycled materials, BPA-free and sustainable.",
-      verified: true,
-     
-    },
-    {
-      id: 2,
-      name: "Organic Cotton T-Shirt",
-      description: "Grown without harmful pesticides, using water-saving techniques.",
-      verified: true,
-      
-    },
-    {
-      id: 3,
-      name: "Solar-Powered Charger",
-      description: "Harness the sun's energy to power your devices anywhere.",
-      verified: false,
-    
-    },
-    {
-      id: 4,
-      name: "Bamboo Cutlery Set",
-      description: "Biodegradable alternative to plastic cutlery, naturally antibacterial.",
-      verified: true,
-      
-    }
-  ]);
-
+  const { products } = useProducts();
+  
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },

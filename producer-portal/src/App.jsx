@@ -5,11 +5,13 @@ import Navbar from "./components/Navbar"; // ✅ Navigation Bar
 import Home from "./pages/Home"; // ✅ Home Page
 import Products from "./pages/products"; // ✅ Products Page
 import AddProduct from "./pages/add"; // ✅ Add Product Page
+import { ProductsProvider } from "./context/ProductsContext"; 
 
 import "./styles/global.css"; // ✅ Global styles
 
 const App = () => {
   return (
+    <ProductsProvider> {/* Wrap Entire App in Context */}
     <Router>
       <Navbar /> {/* Persistent Navbar */}
       <div className="pt-16"> {/* Prevent overlap with navbar */}
@@ -20,6 +22,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </ProductsProvider>
   );
 };
 
