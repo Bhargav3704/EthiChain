@@ -1,20 +1,26 @@
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/navbar";
-import Products from "./components/products/products";
-import AddProduct from "./components/add/add";
-import Home from "./components/home/home";
+import Navbar from "./components/Navbar"; // ✅ Navigation Bar
+import Home from "./pages/Home"; // ✅ Home Page
+import Products from "./pages/products"; // ✅ Products Page
+import AddProduct from "./pages/add"; // ✅ Add Product Page
+
+import "./styles/global.css"; // ✅ Global styles
+
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/home" element={<Home/>} />
-        <Route path="/Products" element={< Products/>} />
-        <Route path="/Add" element={<AddProduct/>} />
-      </Routes> 
+      <Navbar /> {/* Persistent Navbar */}
+      <div className="pt-16"> {/* Prevent overlap with navbar */}
+        <Routes>
+          <Route path="/" element={<Home />} /> {/* ✅ Default Route for Home */}
+          <Route path="/products" element={<Products />} /> {/* ✅ Route for Products */}
+          <Route path="/add" element={<AddProduct />} /> {/* ✅ Route for Add Product */}
+        </Routes>
+      </div>
     </Router>
-  )
-}       
+  );
+};
 
 export default App;
