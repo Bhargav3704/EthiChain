@@ -1,122 +1,98 @@
-/* LeaderboardSexy.css */
-
-/* Root Styles for Customization - Sexy Leaderboard */
+/* Root Styles for Customization - Dark Neon Leaderboard */
 :root {
-    --ls-bg-gradient-start: #1a2a6c; /* Deep Indigo */
-    --ls-bg-gradient-end: #2b3a72;
-    --ls-card-bg: rgba(255, 255, 255, 0.08); /* Frosted glass card */
-    --ls-header-color: #ffffff; /* White header text */
-    --ls-header-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glowing header */
-    --ls-rank-text: #ffd700; /* Gold for rank numbers */
-    --ls-product-name: #ffffff; /* White product names */
-    --ls-score-highlight: #42f00d; /* Vibrant green for top score */
-    --ls-score-text: #e0e0e0; /* Light grey for scores */
-    --ls-leader-bg-top: #ffc107; /* Yellow for top leader */
-    --ls-leader-text-top: #333; /* Dark text on top leader */
-    --ls-leader-bg-second: #9e9e9e; /* Grey for second place */
-    --ls-leader-text-second: #fff; /* White text on second place */
-    --ls-leader-bg-third: #ff7043; /* Orange for third place */
-    --ls-leader-text-third: #fff; /* White text on third place */
-    --ls-leader-bg-other: #37474f; /* Dark grey for other ranks */
-    --ls-leader-text-other: #fff; /* White text for other ranks */
-    --ls-shadow-card: 0 15px 30px rgba(0, 0, 0, 0.3); /* Deeper card shadow */
-    --ls-shadow-item: 0 8px 15px rgba(0, 0, 0, 0.2); /* Item shadow */
-    --ls-loading-icon-color: #ffffff; /* White loading icon */
-    --ls-font-header: 'Montserrat', sans-serif; /* Modern header font */
-    --ls-font-body: 'Roboto', sans-serif; /* Clean body font */
+    --primary-neon: #00ffcc; /* Neon Cyan */
+    --secondary-neon: #1558de; /* Neon Green */
+    --accent-neon: #ff0077; /* Neon Pink */
+    --warning-neon: #ffcc00; /* Neon Yellow */
+    --danger-neon: #ff3333; /* Neon Red */
+    --bg-dark: #0d0d0d; /* Deep Black Background */
+    --bg-card: #181818; /* Dark Card Background */
+    --text-primary: #ffffff; /* White Text */
+    --text-secondary: #b0b0b0; /* Greyish Text */
+    --shadow-neon: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon Glow */
+    --shadow-soft: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* General Container and Body Styles */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+/* Leaderboard Container */
 .leaderboard-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, var(--ls-bg-gradient-start), var(--ls-bg-gradient-end));
-    color: var(--ls-header-color);
-    font-family: var(--ls-font-body);
+    background-image: linear-gradient(to bottom right, #101020, #000000);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
     padding: 2rem;
-    box-sizing: border-box;
 }
 
+/* Leaderboard Card */
 .leaderboard-card {
-    background-color: var(--ls-card-bg);
-    backdrop-filter: blur(30px); /* Stronger blur effect */
-    border-radius: 1.25rem;
-    box-shadow: var(--ls-shadow-card);
+    background-color: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-neon);
     padding: 3rem;
     width: 100%;
-    max-width: 900px; /* Wider leaderboard card */
+    max-width: 900px;
     text-align: center;
-}
-
-/* Loading Indicator */
-.leaderboard-loading-icon {
-    animation: rotateLeaderboard 1.2s linear infinite;
-    color: var(--ls-loading-icon-color);
-    width: 70px; /* Larger loading icon */
-    height: 70px;
-    margin-bottom: 2rem;
-}
-
-@keyframes rotateLeaderboard {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }
 
 /* Leaderboard Header */
 .leaderboard-header {
-    font-family: var(--ls-font-header);
-    font-size: 3rem; /* Larger header */
-    font-weight: 700;
-    color: var(--ls-header-color);
-    text-shadow: var(--ls-header-shadow);
-    margin-bottom: 2.5rem;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: var(--shadow-neon);
+    margin-bottom: 2rem;
 }
 
-/* Leaderboard List Styles */
+/* Leaderboard List */
 .leaderboard-list {
     list-style: none;
     padding: 0;
     margin-top: 2rem;
 }
 
+/* Leaderboard Item */
 .leaderboard-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem; /* More padding in list items */
+    padding: 1.5rem 2rem;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    box-shadow: var(--ls-shadow-item);
+    box-shadow: var(--shadow-soft);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .leaderboard-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    box-shadow: var(--shadow-neon);
 }
 
-/* Rank and Product Name */
+/* Rank Number */
 .leaderboard-rank {
-    font-size: 2rem; /* Larger rank number */
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--ls-rank-text);
+    color: var(--warning-neon);
     margin-right: 1.5rem;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); /* Gold shadow for rank */
+    text-shadow: var(--shadow-neon);
 }
 
+/* Product Name */
 .leaderboard-product-name {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--ls-product-name);
+    color: var(--text-primary);
     flex-grow: 1;
-    text-align: left; /* Align product name to the left */
+    text-align: left;
 }
 
 /* Score Display */
@@ -127,97 +103,77 @@
 }
 
 .leaderboard-score {
-    font-size: 1.5rem; /* Larger score */
+    font-size: 1.8rem;
     font-weight: bold;
-    color: var(--ls-score-text);
+    color: var(--secondary-neon);
+    text-shadow: 0 0 10px var(--secondary-neon);
 }
 
-.leaderboard-score.top-score {
-    color: var(--ls-score-highlight); /* Highlight top score in green */
-    text-shadow: 0 0 5px var(--ls-score-highlight); /* Green glow for top score */
+/* Glowing Buttons */
+.leaderboard-button {
+    margin-top: 1.5rem;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    background: transparent;
+    border: 2px solid var(--primary-neon);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
-.leaderboard-icon-up {
-    color: var(--ls-score-highlight); /* Green up arrow */
+.leaderboard-button:hover {
+    background: var(--primary-neon);
+    color: #000;
+    box-shadow: var(--shadow-neon);
+    transform: scale(1.1);
 }
 
-
-/* Leader Item Background Variations - Top 3 */
+/* Glowing Top 3 Ranks */
 .leaderboard-item:nth-child(1) {
-    background-color: var(--ls-leader-bg-top);
-    color: var(--ls-leader-text-top);
+    background-color: var(--warning-neon);
+    color: black;
+    box-shadow: 0 0 15px var(--warning-neon);
 }
-
-.leaderboard-item:nth-child(1) .leaderboard-rank { color: var(--ls-leader-text-top); text-shadow: none; }
-.leaderboard-item:nth-child(1) .leaderboard-product-name { color: var(--ls-leader-text-top); }
-.leaderboard-item:nth-child(1) .leaderboard-score { color: var(--ls-leader-text-top); }
-.leaderboard-item:nth-child(1) .leaderboard-icon-up { color: var(--ls-leader-text-top); }
-
-
 .leaderboard-item:nth-child(2) {
-    background-color: var(--ls-leader-bg-second);
-    color: var(--ls-leader-text-second);
+    background-color: var(--text-secondary);
+    color: black;
+    box-shadow: 0 0 15px var(--text-secondary);
 }
-.leaderboard-item:nth-child(2) .leaderboard-rank { color: var(--ls-leader-text-second); text-shadow: none; }
-.leaderboard-item:nth-child(2) .leaderboard-product-name { color: var(--ls-leader-text-second); }
-.leaderboard-item:nth-child(2) .leaderboard-score { color: var(--ls-leader-text-second); }
-.leaderboard-item:nth-child(2) .leaderboard-icon-up { color: var(--ls-leader-text-second); }
-
-
 .leaderboard-item:nth-child(3) {
-    background-color: var(--ls-leader-bg-third);
-    color: var(--ls-leader-text-third);
+    background-color: var(--danger-neon);
+    color: white;
+    box-shadow: 0 0 15px var(--danger-neon);
 }
-.leaderboard-item:nth-child(3) .leaderboard-rank { color: var(--ls-leader-text-third); text-shadow: none; }
-.leaderboard-item:nth-child(3) .leaderboard-product-name { color: var(--ls-leader-text-third); }
-.leaderboard-item:nth-child(3) .leaderboard-score { color: var(--ls-leader-text-third); }
-.leaderboard-item:nth-child(3) .leaderboard-icon-up { color: var(--ls-leader-text-third); }
 
-
-/* Leader Item Background for Ranks 4 and Below */
-.leaderboard-item:nth-child(n+4) {
-    background-color: var(--ls-leader-bg-other);
-    color: var(--ls-leader-text-other);
-}
-.leaderboard-item:nth-child(n+4) .leaderboard-rank { color: var(--ls-leader-text-other); text-shadow: none; }
-.leaderboard-item:nth-child(n+4) .leaderboard-product-name { color: var(--ls-leader-text-other); }
-.leaderboard-item:nth-child(n+4) .leaderboard-score { color: var(--ls-leader-text-other); }
-.leaderboard-item:nth-child(n+4) .leaderboard-icon-up { color: var(--ls-leader-text-other); }
-
-
-/* Responsive Design Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .leaderboard-card {
         padding: 2rem;
-        border-radius: 1rem;
     }
 
     .leaderboard-header {
         font-size: 2.5rem;
-        margin-bottom: 2rem;
     }
 
     .leaderboard-item {
         padding: 1rem 1.5rem;
-        border-radius: 0.5rem;
-        margin-bottom: 0.75rem;
     }
 
     .leaderboard-rank {
-        font-size: 1.75rem;
-        margin-right: 1rem;
+        font-size: 1.5rem;
     }
 
     .leaderboard-product-name {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .leaderboard-score {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
-    .leaderboard-loading-icon {
-        width: 60px;
-        height: 60px;
+    .leaderboard-button {
+        padding: 12px 25px;
     }
 }

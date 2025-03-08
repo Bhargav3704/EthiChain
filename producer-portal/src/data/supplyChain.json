@@ -1,0 +1,39 @@
+[
+    {
+      "id": "Raw Material Sourcing",
+      "location": "Amazon Rainforest, Brazil",
+      "sustainability": "🌱 85% Sustainable",
+      "position": [0, 3, 0]
+    },
+    {
+      "id": "Manufacturing",
+      "location": "Shenzhen, China",
+      "sustainability": "🏭 70% Eco-friendly processes",
+      "position": [-2, 1, 0]
+    },
+    {
+      "id": "Quality Control",
+      "location": "Berlin, Germany",
+      "sustainability": "🔍 90% Ethical",
+      "position": [2, 1, 0]
+    },
+    {
+      "id": "Packaging",
+      "location": "Los Angeles, USA",
+      "sustainability": "📦 60% Recyclable materials",
+      "position": [-3, -1, 0]
+    },
+    {
+      "id": "Distribution",
+      "location": "Global Warehouses",
+      "sustainability": "🚚 75% Carbon Neutral",
+      "position": [1, -1, 0]
+    },
+    {
+      "id": "Retail",
+      "location": "E-commerce & Stores",
+      "sustainability": "🛒 80% Fair Trade Certified",
+      "position": [0, -3, 0]
+    }
+  ]
+  

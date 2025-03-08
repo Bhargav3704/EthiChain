@@ -1,0 +1,50 @@
+.main-portal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4b0082, #8a2be2);
+    color: white;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .portal-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .consumer {
+    background-color: #00b894;
+    color: white;
+  }
+  
+  .producer {
+    background-color: #0984e3;
+    color: white;
+  }
+  
+  .portal-button:hover {
+    transform: scale(1.1);
+  }
+  
