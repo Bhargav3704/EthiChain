@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Portal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f10, #1c1c1e);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1100px;
+            width: 100%;
+            text-align: left;
+            padding-bottom: 40px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        /* BUTTONS */
+        .portal-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            padding: 50px 0;
+        }
+
+        .portal-button {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 40px;
+            color: white;
+            background: transparent;
+            border: 2px solid white;
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+
+        .portal-button:hover {
+            background: white;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* SOLUTIONS SECTION */
+        .solution-section {
+            background: #18181b;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .solutions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .solution-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            text-align: left;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(23, 254, 7, 0.877);
+        }
+
+        .solution-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .solution-card p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .portal-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1><span id="typed-output"></span></h1>
+            <p>Sustainability fraud is everywhere. Fake claims, misleading labels, and greenwashing deceive millions. Our solution guarantees real transparency.</p>
+        </div>
+        
+        <div class="hero-image">
+            <img src="/static/home.jpg" alt="AI and Blockchain">
+        </div>
+    </div>
+
+    <!-- TYPED.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed("#typed-output", {
+            strings: [
+                "Fighting Fake Sustainability Claims with AI & Blockchain",
+                "Ensuring Transparency with AI-Powered Verification",
+                "Stopping Greenwashing Using Advanced Technology"
+            ],
+            typeSpeed: 50,  
+            backSpeed: 25,  
+            startDelay: 500,
+            backDelay: 2000, 
+            loop: true,  
+            showCursor: true,  
+            cursorChar: "|"
+        });
+    </script>
+
+    <!-- BUTTONS -->
+    <div class="portal-buttons">
+        <button class="portal-button" onclick="window.location.href='/producer'">Producer Portal</button>
+        <button class="portal-button" onclick="window.location.href='/consumer'">Consumer Portal</button>
+    </div>
+
+    <!-- SOLUTIONS SECTION -->
+    <div class="solution-section">
+        <h2>Our Solution</h2>
+        <div class="solutions-container">
+            <div class="solution-card">
+                <h3>AI-Powered Certificate Verification</h3>
+                <p>Our system leverages web scraping to verify the authenticity of sustainability certificates. Users can also upload certificates, which are securely stored and analyzed using the Gemini API to ensure compliance and detect inconsistencies.</p>
+            </div>
+            
+            <div class="solution-card">
+                <h3>Blockchain-Powered Transparency</h3>
+                <p>Verified claims are stored on an immutable ledger, ensuring no tampering.</p>
+            </div>
+            <div class="solution-card">
+                <h3>QR Code-Based Verification</h3>
+                <p>Consumers can scan a QR code to see real proof of ethical sourcing.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

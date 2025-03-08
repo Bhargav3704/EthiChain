@@ -7,22 +7,47 @@ import Navbar from "../components/Navbar"; // Import the Navbar
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { sender: 'bot', text: 'Hello, I’m here to help. Take a deep breath, how are you feeling today?' },
+    { sender: 'bot', text: '🌱 Hello! I am GreenGuard, your AI-powered sustainability guide, here to help you navigate greenwashing, ethical practices, and eco-friendly solutions.' },
   ]);
   const [input, setInput] = useState('');
   const [fadeIn, setFadeIn] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const chatContainerRef = useRef(null); // Reference for auto-scrolling
 
   useEffect(() => {
     setFadeIn(true);
   }, []);
 
-  const handleSendMessage = () => {
+  // Auto-scroll to the latest message
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  const handleSendMessage = async () => {
     if (input.trim()) {
-      setMessages((prev) => [...prev, { sender: 'user', text: input }]);
-      setTimeout(() => {
-        setMessages((prev) => [...prev, { sender: 'bot', text: 'I’m here for you. Let’s take it slow and talk through things.' }]);
-      }, 1000);
+      const userMessage = { sender: 'user', text: input };
+      setMessages((prev) => [...prev, userMessage]);
       setInput('');
+      setLoading(true);
+
+      try {
+        const response = await fetch(`http://localhost:8000/chat?question=${encodeURIComponent(input)}`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+
+        const data = await response.json();
+        const botMessage = { sender: 'bot', text: data.response || "I’m here for you. Let’s talk through things." };
+
+        setMessages((prev) => [...prev, botMessage]);
+      } catch (error) {
+        console.error("Error fetching chat response:", error);
+        setMessages((prev) => [...prev, { sender: 'bot', text: "Sorry, I couldn't get a response." }]);
+      }
+      
+      setLoading(false);
     }
   };
 
@@ -34,58 +59,42 @@ const Chatbot = () => {
         width: '100%',
         height: '100vh',
         maxWidth: '450px',
-        background: 'rgba(255, 255, 255, 0.3)',
+        background: 'rgba(30, 30, 30, 0.8)', // Dark background with slight transparency
         borderRadius: '20px',
-        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.6)',
         padding: '20px',
         backdropFilter: 'blur(15px)',
         animation: fadeIn ? 'fadeIn 1s ease-in-out' : '',
         transition: 'all 0.4s ease-in-out',
       }}
-      
     >
-      
-      <style>
-        {`
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-
-          .chat-hover:hover {
-            transform: scale(1.03);
-            transition: transform 0.2s ease-in-out;
-          }
-
-          .btn-hover:hover {
-            background: #8ecae6 !important;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease-in-out;
-          }
-        `}
-      </style>
-
+      {/* Chat Header */}
       <div
         style={{
           padding: '15px',
-          background: 'linear-gradient(45deg, #A8DADC, #F1FAEE)',
+          background: 'linear-gradient(45deg, #4A90E2, #D94F6A)', // Neon Gradient background
           fontWeight: 'bold',
           fontSize: '18px',
           textAlign: 'center',
           borderTopLeftRadius: '20px',
           borderTopRightRadius: '20px',
+          color: '#fff',
+          boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', // Glowing effect for header
         }}
       >
+        GreenGuard
       </div>
+
+      {/* Chat Messages (Scrollable Area) */}
       <div
+        ref={chatContainerRef}
         style={{
-          flex: 1,
-          padding: '15px',
-          overflowY: 'auto',
+          flexGrow: 1,
+          overflowY: 'auto', // Enables scrolling only for messages
           background: 'rgba(255, 255, 255, 0.1)',
           borderRadius: '10px',
-          animation: fadeIn ? 'fadeIn 0.8s ease-in-out' : '',
+          padding: '15px',
+          maxHeight: '85vh', // Keeps input box visible while chat scrolls
         }}
       >
         {messages.map((msg, index) => (
@@ -94,50 +103,54 @@ const Chatbot = () => {
             className="chat-hover"
             style={{
               alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
-              background: msg.sender === 'user' ? 'rgba(168, 218, 220, 0.8)' : 'rgba(241, 250, 238, 0.8)',
+              background: msg.sender === 'user' ? 'rgba(68, 186, 121, 0.7)' : 'rgba(12, 18, 43, 0.8)',
               padding: '12px 18px',
               borderRadius: '20px',
               maxWidth: '75%',
               fontSize: '15px',
               marginBottom: '10px',
+              boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+              color: msg.sender === 'user' ? '#fff' : '#e0e0e0', // White text for user messages, light gray for bot
             }}
           >
             {msg.text}
           </div>
         ))}
+        {loading && <div className="chat-hover" style={{ color: "#fff", fontStyle: "italic" }}>Typing...</div>}
       </div>
+
+      {/* Chat Input (Always Visible) */}
       <div style={{ display: 'flex', alignItems: 'center', padding: '12px', background: 'rgba(255, 255, 255, 0.1)', borderRadius: '10px' }}>
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type your message..."
-          className="chat-hover"
           style={{
             flex: 1,
-            padding: '12px',
+            padding: '20px',
             fontSize: '15px',
             border: '1px solid #ddd',
             borderRadius: '25px',
             marginRight: '15px',
             background: 'rgba(255, 255, 255, 0.2)',
             backdropFilter: 'blur(10px)',
-            color: '#333',
+            color: '#fff',
             outline: 'none',
-            transition: 'all 0.3s ease-in-out',
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', // Glowing effect for input
           }}
         />
         <button
           onClick={handleSendMessage}
-          className="btn-hover"
           style={{
-            padding: '12px 18px',
-            background: '#A8DADC',
+            padding: 'px 20px',
+            background: 'linear-gradient(45deg,rgb(57, 53, 54), #4A90E2)', // Neon Gradient background for button
             color: '#fff',
             border: 'none',
             borderRadius: '25px',
             fontWeight: 'bold',
             cursor: 'pointer',
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', // Glowing effect for button
           }}
         >
           Send
@@ -145,7 +158,6 @@ const Chatbot = () => {
       </div>
     </div>
   );
-  
 };
 
 const RotatingModel = () => {
@@ -155,27 +167,20 @@ const RotatingModel = () => {
       ref.current.rotation.y += 0.002;
     }
   });
-  return <group ref={ref}><Model scale={0.4} position={[1.5, -0.8, 0]} /></group>;
+  return <group ref={ref}><Model scale={0.005} position={[0, 0, 0]} /></group>;
 };
 
 const Scene = () => {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      {/* Navbar should be outside the main content flex container */}
       <Navbar />
 
-      <div
-        style={{
-          display: 'flex',
-          width: '100%',
-          height: 'calc(100vh - -52px)', // Adjust height if Navbar takes up space
-        }}
-      >
+      <div style={{ display: 'flex', width: '100%', height: 'calc(100vh - 52px)' }}>
         {/* Left side: the 3D Canvas */}
         <div style={{ flex: 1 }}>
-          <Canvas camera={{ position: [5, 2, 5], fov: 50 }}>
-            <ambientLight intensity={0.4} />
-            <directionalLight position={[10, 10, 10]} intensity={0.7} />
+          <Canvas camera={{ position: [4, 3, 6], fov: 50 }}>
+            <ambientLight intensity={2} /> {/* Increased ambient light */}
+            <directionalLight position={[10, 10, 10]} intensity={3} /> {/* Increased directional light */}
             <RotatingModel />
             <OrbitControls
               enablePan={false}
@@ -193,7 +198,7 @@ const Scene = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'linear-gradient(to right, rgba(199, 198, 198, 0.5), rgba(203, 189, 199, 0.6))',
+            background: 'linear-gradient(to right, rgba(30, 30, 30, 0.7), rgba(12, 18, 43, 0.8))', // Dark gradient background
             backdropFilter: 'blur(10px)',
           }}
         >
@@ -203,7 +208,5 @@ const Scene = () => {
     </div>
   );
 };
-
-
 
 export default Scene;

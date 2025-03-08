@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar"; // Navigation Bar
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import ProductVerification from "./pages/ProductVerification";
 import Transparency from "./pages/Transparency";
 import Report from "./pages/Report";
@@ -19,7 +18,6 @@ const App = () => {
       <div className="pt-16"> {/* Prevent overlap with navbar */}
         <Routes>
           <Route path="/" element={<Home />} /> {/* Default Route */}
-          <Route path="/Login" element={<Login />} />
           <Route path="/ProductVerification" element={<ProductVerification />} />
           <Route path="/Transparency" element={<Transparency />} />
           <Route path="/Report" element={<Report />} />

@@ -1,53 +1,56 @@
-/* ReportFresh.css */
-
-/* Root Styles for Customization - Fresh & Modern Report */
+/* Root Styles for Customization - Dark Neon Report */
 :root {
-    --rf-report-bg: #f4f6f8; /* Very light grey background */
-    --rf-card-bg: #ffffff; /* White card background */
-    --rf-primary: #007bff; /* Bootstrap primary blue */
-    --rf-primary-dark: #0056b3;
-    --rf-accent: #ffc107; /* Bootstrap warning yellow */
-    --rf-success: #28a745; /* Bootstrap success green */
-    --rf-warning: #dc3545; /* Bootstrap danger red */
-    --rf-text-primary: #333333; /* Dark grey for primary text */
-    --rf-text-secondary: #666666; /* Medium grey for secondary text */
-    --rf-border-color: #dee2e6; /* Light border color */
-    --rf-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    --rf-header-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean header font */
-    --rf-body-font: 'Roboto', sans-serif; /* Readable body font */
+    --primary-neon: #00ffcc; /* Neon Cyan */
+    --secondary-neon: #42f00d; /* Neon Green */
+    --accent-neon: #ff0077; /* Neon Pink */
+    --warning-neon: #ffcc00; /* Neon Yellow */
+    --danger-neon: #ff3333; /* Neon Red */
+    --bg-dark: #0d0d0d; /* Deep Black Background */
+    --bg-card: #181818; /* Dark Card Background */
+    --text-primary: #ffffff; /* White Text */
+    --text-secondary: #b0b0b0; /* Greyish Text */
+    --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.8); /* Neon Glow */
+    --shadow-soft: 0 4px 10px rgba(186, 109, 109, 0.1);
 }
 
 /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+/* Report Container */
 .report-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--rf-report-bg);
-    color: var(--rf-text-primary);
-    font-family: var(--rf-body-font);
+    background-image: linear-gradient(to bottom right, #101020, #000000);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
     padding: 2rem;
-    box-sizing: border-box;
 }
 
+/* Report Card */
 .report-card {
-    background-color: var(--rf-card-bg);
-    border-radius: 0.75rem;
-    box-shadow: var(--rf-shadow);
+    background-color: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-neon);
     padding: 3rem;
-    border: 1px solid var(--rf-border-color);
     width: 100%;
-    max-width: 800px; /* Adjust max width as needed */
+    max-width: 900px;
+    text-align: center;
 }
 
 /* Report Header */
 .report-header {
-    font-family: var(--rf-header-font);
-    font-size: 2.25rem; /* Slightly smaller, more refined header */
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--rf-text-primary);
+    text-shadow: var(--shadow-neon);
     margin-bottom: 2rem;
-    text-align: center;
 }
 
 /* Compliance Score Section */
@@ -57,43 +60,45 @@
 }
 
 .compliance-label {
-    font-size: 1.1rem;
-    color: var(--rf-text-secondary);
+    font-size: 1.3rem;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: block;
 }
 
 .compliance-score {
-    font-size: 3rem; /* Prominent score size */
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--rf-success); /* Green for good compliance */
+    color: var(--secondary-neon);
+    text-shadow: 0 0 15px var(--secondary-neon);
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    background-color: rgba(40, 167, 69, 0.1); /* Light green background */
+    background: rgba(66, 240, 13, 0.2);
+    box-shadow: var(--shadow-neon);
 }
 
 /* Greenwashing Warning Section */
 .greenwashing-warning-report {
-    background-color: rgba(220, 53, 69, 0.1); /* Light red background */
-    color: var(--rf-warning); /* Red text for warning */
-    border: 1px solid var(--rf-warning);
+    background: rgba(171, 0, 14, 0.687);
+    color: var(--danger-neon);
+    border: 2px solid var(--danger-neon);
     padding: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     margin-top: 2rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    box-shadow: 0 0 15px var(--danger-neon);
 }
 
 .warning-icon-report {
     width: 24px;
     height: 24px;
-    color: var(--rf-warning);
+    color: var(--danger-neon);
 }
-
 
 /* Audit Insights Section */
 .audit-insights {
@@ -104,9 +109,9 @@
 .audit-insights-header {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--rf-text-primary);
+    color: var(--text-primary);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--rf-border-color);
+    border-bottom: 2px solid var(--shadow-soft);
     padding-bottom: 0.5rem;
 }
 
@@ -117,56 +122,73 @@
 
 .audit-item {
     padding: 0.75rem 0;
-    border-bottom: 1px dashed var(--rf-border-color);
+    border-bottom: 1px dashed var(--shadow-soft);
     margin-bottom: 0.75rem;
 }
 
 .audit-item:last-child {
-    border-bottom: none; /* No border for the last item */
+    border-bottom: none;
     margin-bottom: 0;
 }
 
 .audit-detail {
-    color: var(--rf-text-secondary);
-    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
     margin-top: 0.25rem;
 }
 
 .audit-status {
     font-weight: bold;
-    color: var(--rf-text-primary);
+    color: var(--secondary-neon);
+    text-shadow: var(--shadow-neon);
 }
 
+/* Glowing Buttons */
+.report-button {
+    margin-top: 1.5rem;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    background: transparent;
+    border: 2px solid var(--primary-neon);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
 
-/* Loading Indicator (If you need to style it) */
+.report-button:hover {
+    background: var(--primary-neon);
+    color: #000;
+    box-shadow: var(--shadow-neon);
+    transform: scale(1.1);
+}
+
+/* Loading Indicator */
 .report-loading-icon {
-    /* Style your loading icon here if needed, e.g., spinner styles */
-    animation: rotateReportFresh 1.5s linear infinite;
-    border: 0.4em solid rgba(0, 123, 255, 0.2);
-    border-top-color: var(--rf-primary);
+    animation: rotateReport 1.5s linear infinite;
+    border: 0.4em solid rgba(0, 255, 255, 0.2);
+    border-top-color: var(--primary-neon);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    margin: 1rem auto; /* Center align */
+    margin: 1rem auto;
 }
 
-@keyframes rotateReportFresh {
+@keyframes rotateReport {
     to {
         transform: rotate(360deg);
     }
 }
 
-
-/* Responsive adjustments for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .report-card {
         padding: 2rem;
-        border-radius: 0.5rem;
     }
 
     .report-header {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .compliance-score {
@@ -193,5 +215,9 @@
         padding: 0.5rem 0;
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
+    }
+
+    .report-button {
+        padding: 12px 25px;
     }
 }

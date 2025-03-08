@@ -1,27 +1,24 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Example font */
-    color: #333; /* Dark gray text */
-    background-color: #f9f9f9; /* Light gray background */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* White text */
+    background-color: #0d0d0d; /* Deep black background */
     line-height: 1.6;
 }
 
-.max-w-7xl { /* Reusable container width */
-    max-width: 80rem; /* Equivalent to Tailwind's max-w-7xl */
+.max-w-7xl {
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* Equivalent to Tailwind's px-6 */
-    padding-right: 1rem; /* Equivalent to Tailwind's px-6 */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-/* Navigation Bar Styles */
+/* Navigation Bar */
 nav {
-    background-color: #fff; /* White navbar */
-    padding-top: 1.5rem; /* Equivalent to Tailwind's py-6 */
-    padding-bottom: 1.5rem; /* Equivalent to Tailwind's py-6 */
-    padding-left: 2rem; /* Equivalent to Tailwind's px-8 */
-    padding-right: 2rem; /* Equivalent to Tailwind's px-8 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Equivalent to Tailwind's shadow-md */
+    background-color: #121212; /* Dark gray navbar */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -31,26 +28,26 @@ nav {
 }
 
 .logo {
-    height: 2.5rem; /* Equivalent to Tailwind's h-10 */
-    width: 2.5rem; /* Equivalent to Tailwind's w-10 */
-    margin-right: 0.5rem; /* Equivalent to Tailwind's mr-2 */
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 0.5rem;
 }
 
 .nav-title {
-    margin-left: 0.75rem; /* Equivalent to Tailwind's ml-3 */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    font-size: 1.25rem; /* Equivalent to Tailwind's text-xl */
-    color: #1a202c; /* Gray-900 text */
+    margin-left: 0.75rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #e8e8e8; /* Light gray */
 }
 
 .nav-links {
     display: flex;
-    space-x: 2rem; /* Equivalent to Tailwind's space-x-8 */
+    gap: 2rem;
 }
 
 .nav-button {
-    color: #4a5568; /* Gray-700 text */
-    font-weight: 600; /* Equivalent to Tailwind's font-semibold */
+    color: #ffffff;
+    font-weight: 600;
     transition: color 0.2s ease-in-out;
     background: none;
     border: none;
@@ -59,306 +56,111 @@ nav {
 }
 
 .nav-button:hover {
-    color: #1a202c; /* Gray-900 hover text */
+    color: #00bcd4; /* Light cyan hover effect */
 }
 
-.mobile-menu-button {
-    color: #4a5568;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-.mobile-menu-icon {
-    height: 1.5rem; /* Equivalent to Tailwind's h-6 */
-    width: 1.5rem; /* Equivalent to Tailwind's w-6 */
-    fill: currentColor;
-}
-
-
-/* Hero Section Styles */
+/* Hero Section */
 .hero-section {
-    padding-top: 5rem; /* Equivalent to Tailwind's py-20 */
-    padding-bottom: 5rem; /* Equivalent to Tailwind's py-20 */
-    background-color: #edf2f7; /* Gray-100 background */
+    padding: 5rem 0;
+    background-color: #000000; /* Deep black */
+    text-align: center;
 }
 
 .hero-container {
     display: flex;
-    flex-direction: column; /* Stack on small screens */
-    align-items: center; /* Center items */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-@media (min-width: 768px) { /* Medium screens and up */
+@media (min-width: 768px) {
     .hero-container {
-        flex-direction: row; /* Horizontal layout on larger screens */
+        flex-direction: row;
+        text-align: left;
     }
 }
 
-
 .hero-text-content {
-    width: 100%; /* Full width on small screens */
-    padding-right: 2rem; /* Equivalent to Tailwind's pr-8 */
-    margin-bottom: 2rem; /* Spacing for stacked layout */
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
     .hero-text-content {
-        width: 50%; /* Half width on larger screens */
-        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        width: 50%;
     }
 }
 
-
 .hero-title {
-    font-size: 3rem; /* Equivalent to Tailwind's text-5xl */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    color: #1a202c; /* Gray-900 text */
-    margin-bottom: 1.5rem; /* Equivalent to Tailwind's mb-6 */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    color: #4a5568; /* Gray-700 text */
-    font-size: 1.125rem; /* Equivalent to Tailwind's text-lg */
-    margin-bottom: 2rem; /* Equivalent to Tailwind's mb-8 */
+    color: #b0b0b0;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
 }
 
 .hero-button {
-    background-color: #4299e1; /* Blue-500 background */
-    color: #fff; /* White text */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    padding-top: 0.75rem; /* Equivalent to Tailwind's py-3 */
-    padding-bottom: 0.75rem; /* Equivalent to Tailwind's py-3 */
-    padding-left: 1.5rem; /* Equivalent to Tailwind's px-6 */
-    padding-right: 1.5rem; /* Equivalent to Tailwind's px-6 */
-    border-radius: 9999px; /* Equivalent to Tailwind's rounded-full */
-    transition: background-color 0.3s ease-in-out;
-    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #ffffff;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .hero-button:hover {
-    background-color: #2b6cb0; /* Blue-600 hover background */
+    background-color: #00bcd4;
+    color: #000000;
 }
 
-
+/* Hero Image */
 .hero-image-container {
-    width: 100%; /* Full width on small screens */
-    margin-top: 2rem; /* Spacing for stacked layout */
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    text-align: center;
 }
-
 
 @media (min-width: 768px) {
     .hero-image-container {
-        width: 50%; /* Half width on larger screens */
-        margin-top: 0; /* Remove top margin on larger screens */
+        width: 50%;
+        margin-top: 0;
     }
 }
 
-
 .hero-image {
-    border-radius: 0.5rem; /* Equivalent to Tailwind's rounded-lg */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to Tailwind's shadow-xl */
-    max-width: 100%; /* Ensure image is responsive */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.15);
+    max-width: 100%;
     height: auto;
 }
 
-
-/* Clients Section Styles */
+/* Clients Section */
 .clients-section {
-    padding-top: 4rem; /* Equivalent to Tailwind's py-16 */
-    padding-bottom: 4rem; /* Equivalent to Tailwind's py-16 */
-    background-color: #fff; /* White background */
-}
-
-.clients-container {
-    text-align: center; /* Center title and logos */
+    padding: 4rem 0;
+    background-color: #121212;
 }
 
 .clients-title {
-    font-size: 2.25rem; /* Equivalent to Tailwind's text-3xl */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    color: #1a202c; /* Gray-900 text */
-    margin-bottom: 3rem; /* Equivalent to Tailwind's mb-12 */
-}
-
-.clients-logo-bar {
-    display: flex;
-    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
-    justify-content: space-around; /* Distribute logos evenly */
-    align-items: center;
-    gap: 4rem; /* Equivalent to Tailwind's gap-16 */
-}
-
-.client-logo-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.client-logo {
-    width: 8rem; /* Equivalent to Tailwind's w-32 */
-    height: 4rem; /* Equivalent to Tailwind's h-16 */
-    background-color: #e5e7eb; /* Gray-200 background */
-    border-radius: 0.25rem; /* Equivalent to Tailwind's rounded */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #718096; /* Gray-600 text */
-    font-weight: 600; /* Equivalent to Tailwind's font-semibold */
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #ffffff;
     text-align: center;
-    padding: 0.5rem;
-}
-
-
-/* Services Section Styles */
-.services-section {
-    padding-top: 5rem; /* Equivalent to Tailwind's py-20 */
-    padding-bottom: 5rem; /* Equivalent to Tailwind's py-20 */
-    background-color: #1a202c; /* Gray-900 background */
-    color: #fff; /* White text */
-}
-
-.services-content {
-    text-align: center; /* Center section title */
-}
-
-.services-section-title {
-    font-size: 2.25rem; /* Equivalent to Tailwind's text-3xl */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    margin-bottom: 4rem; /* Equivalent to Tailwind's mb-16 */
-}
-
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive columns */
-    gap: 1.5rem; /* Equivalent to Tailwind's gap-8 */
-    margin-bottom: 2rem; /* Spacing between rows */
-}
-
-
-.service-box {
-    background-color: #374151; /* Gray-800 background */
-    padding: 2rem; /* Equivalent to Tailwind's p-8 */
-    border-radius: 0.5rem; /* Equivalent to Tailwind's rounded-md */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to Tailwind's shadow-lg */
-    transition: box-shadow 0.3s ease-in-out;
-    text-align: left; /* Align text to the left within boxes */
-}
-
-.service-box:hover {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
-}
-
-
-.service-title {
-    font-size: 1.25rem; /* Equivalent to Tailwind's text-xl */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    margin-bottom: 1rem; /* Equivalent to Tailwind's mb-4 */
-}
-
-.service-description {
-    color: #d1d5db; /* Gray-300 text */
-}
-
-
-/* Testimonials Section Styles */
-.testimonials-section {
-    padding-top: 5rem; /* Equivalent to Tailwind's py-20 */
-    padding-bottom: 5rem; /* Equivalent to Tailwind's py-20 */
-    background-color: #f9fafb; /* Gray-50 background */
-}
-
-.testimonials-container {
-    text-align: center; /* Center header */
-}
-
-.testimonials-header {
-    margin-bottom: 4rem; /* Equivalent to Tailwind's mb-16 */
-}
-
-
-.testimonials-section-title {
-    font-size: 2.25rem; /* Equivalent to Tailwind's text-3xl */
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    color: #1a202c; /* Gray-900 text */
-}
-
-.testimonials-subtitle {
-    color: #4a5568; /* Gray-700 text */
-    margin-top: 1rem; /* Equivalent to Tailwind's mt-4 */
-    font-size: 1.125rem; /* Equivalent to Tailwind's text-lg */
-}
-
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 2rem; /* Equivalent to Tailwind's gap-8 */
-}
-
-
-.testimonial-card {
-    background-color: #fff; /* White card background */
-    padding: 2rem; /* Equivalent to Tailwind's p-8 */
-    border-radius: 0.5rem; /* Equivalent to Tailwind's rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to Tailwind's shadow-md */
-    border-top-width: 0.25rem; /* Equivalent to Tailwind's border-t-4 */
-}
-
-.testimonial-card.blue-border {
-    border-top-color: #4299e1; /* Blue-500 border */
-}
-
-.testimonial-card.green-border {
-    border-top-color: #48bb78; /* Green-500 border */
-}
-
-.testimonial-card.yellow-border {
-    border-top-color: #f6e05e; /* Yellow-500 border */
-}
-
-
-.testimonial-text {
-    color: #4a5568; /* Gray-700 text */
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 1.5rem; /* Spacing before author info */
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-}
-
-.client-image-container {
-    width: 4rem; /* Equivalent to Tailwind's w-16 */
-    height: 4rem; /* Equivalent to Tailwind's h-16 */
-    margin-right: 1rem; /* Spacing between image and text */
-}
-
-.client-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Ensure image covers container */
-}
-
-.author-info {
-    text-align: left; /* Align author info to the left */
-}
-
-.author-name {
-    font-weight: bold; /* Equivalent to Tailwind's font-bold */
-    color: #1a202c; /* Gray-900 text */
-}
-
-.author-title {
-    color: #718096; /* Gray-500 text */
-    font-size: 0.875rem; /* Equivalent to Tailwind's text-sm */
+    margin-bottom: 3rem;
 }
 
 .sponsor-category {
@@ -369,99 +171,136 @@ nav {
 .sponsor-tier {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #e0e0e0;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
 .sponsor-logos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
-.sponsor-logo img,
 .sponsor-logos img {
-    max-height: 60px;
-}
-/* Clients & Partners Section Styles (Home.css) */
-
-.clients-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-color: #f7fafc; /* Light gray background */
+    max-height: 50px;
+    filter: brightness(80%);
 }
 
-.clients-container {
-    max-width: 7xl;
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center; /* Center align title and categories */
+/* Services Section */
+.services-section {
+    padding: 5rem 0;
+    background-color: #181818;
+    color: #ffffff;
 }
 
-.clients-title {
-    font-size: 2.25rem; /* Slightly larger title */
-    font-weight: 700;
-    margin-bottom: 2.5rem; /* More space below title */
-    color: #1a202c; /* Darker text for title */
+.services-content {
+    text-align: center;
 }
 
-.sponsor-category {
-    margin-bottom: 3rem; /* Space between sponsor tiers */
+.services-section-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
 }
 
-.sponsor-tier {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem; /* Space below tier title */
-    color: #2d3748; /* Slightly darker tier title */
-    text-transform: uppercase; /* Uppercase tier titles */
-    letter-spacing: 0.05em; /* Slight letter spacing for emphasis */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Platinum Sponsors - Centered Logo */
-.sponsor-logo {
+.service-box {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    box-shadow: 0 25px 50px rgba(0, 255, 255, 0.25);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: #d1d5db;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 5rem 0;
+    background-color: #0d0d0d;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.testimonials-section-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.testimonials-subtitle {
+    color: #b0b0b0;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #00bcd4;
+}
+
+.testimonial-text {
+    color: #b0b0b0;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-bottom: 2rem; /* Space below platinum logo */
+    align-items: center;
 }
 
-.sponsor-logo img {
-    max-height: 70px; /* Adjust as needed */
-    max-width: 100%;
-    height: auto;
-    display: block; /* Remove extra space below image */
-    margin: 0 auto; /* Center image in container if needed */
+.client-image {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 
-
-/* Gold & Silver Sponsors - Logo Bar Layout */
-.sponsor-logos {
-    display: flex;
-    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
-    justify-content: center; /* Center logos horizontally */
-    gap: 2rem; /* Spacing between logos in the row */
+.author-info {
+    text-align: left;
 }
 
-.sponsor-logos img {
-    max-height: 50px; /* Adjust for Gold/Silver logos */
-    max-width: 100%;
-    height: auto;
-    display: block;
+.author-name {
+    font-weight: bold;
+    color: #ffffff;
 }
 
-
-/*  Responsiveness (Optional - Adjust as needed) */
-@media (max-width: 768px) {
-    .clients-title {
-        font-size: 2rem;
-    }
-
-    .sponsor-tier {
-        font-size: 1.3rem;
-    }
-
-    .sponsor-logos {
-        gap: 1.5rem; /* Reduce gap on smaller screens */
-    }
+.author-title {
+    color: #b0b0b0;
+    font-size: 0.875rem;
 }
